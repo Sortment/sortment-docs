@@ -213,6 +213,7 @@
   * [Sync Schedules](settings/sync-schedules.md)
   * [Audit Logs](settings/audit-logs.md)
   * [Subscription Groups And Contact Fields](settings/subscription-groups-and-contact-fields.md)
+  * [Hybrid Unsubscribe Policy](settings/hybrid-unsubscribe-policy.md)
   * [Delivery Controls](settings/delivery-controls.md)
   * [Test Profiles](settings/test-profiles.md)
   * [Alerts](settings/alerts.md)
