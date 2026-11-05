@@ -28,6 +28,17 @@ This is typically granted through:
   * `SECURITYADMIN` (depending on scope)
   * `MONITOR USAGE`
 
+### Which scheduled job issued this Snowflake query?
+
+In Snowflake query history, inspect the query tag for the statement you are investigating. A Sortment query issued in a scheduled job can include these fields:
+
+| Field | What it tells you |
+| --- | --- |
+| `scheduler_task` | The type of scheduled work that issued the query. |
+| `scheduler_job_id` | The job ID. Use it to group statements from the same job. |
+
+For example, two statements with the same job ID can belong to one run even if their SQL differs. A statement with no scheduler fields is not evidence that a run failed: queries issued outside a scheduled job may have no job context. When asking support about a run, include its time and timezone, the Snowflake query ID and the scheduler fields if present.
+
 ## **Athena**
 
 To access query history, the principal needs the following Athena permissions:

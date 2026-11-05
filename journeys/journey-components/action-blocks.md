@@ -89,6 +89,7 @@ Setup pending will appear if the block isn’t fully configured (e.g., missing t
 * **Endpoint**: Enter the full API URL. (Must begin with `http://` or `https://`).
 * **Headers**: Add key–value pairs for content-type, auth tokens, etc.
 * **Request Body**: JSON formatted. (Use **tidy mode** or expand for easier editing).
+* **Pasting a header or JSON body**: Use plain text. Sortment normalizes non-breaking spaces that can appear when copying formatted text. If the endpoint still rejects an authorization header, check the expected scheme, the space after it and the credential itself. Do not include the credential in a screenshot or support request.
 * **Mapping API Response**:
   * **Use keys from response payload:** Map data returned by the API for use in later blocks.
   * Paste a JSON response to extract and select values, or manually add fields.
