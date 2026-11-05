@@ -61,9 +61,9 @@ A category named "Product Notifications" might contain subscription groups like 
 
 1. Go to the **Settings** section in your Sortment dashboard.
 2. Click on **Subscription Groups**.
-3. Select the relevant channel: **Email**, **SMS**, **WhatsApp**, or **Push**. If the page shows **Setup subscription key** instead of your groups, set up the key for that channel before creating a group.
+3. Select the relevant channel: **Email**, **SMS**, **WhatsApp**, or **Push**. If the page shows **Setup subscription key** instead of your groups, a workspace administrator can configure the [unsubscribe identifier](hybrid-unsubscribe-policy.md) before creating a group. This setting applies across the workspace.
 
-<figure><img src="../.gitbook/assets/subscription-groups-setup-key.jpg" alt="Email tab in Subscription Groups showing the Setup subscription key prompt"><figcaption><p>An unconfigured channel shows the setup prompt before you can create a group.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/subscription-groups-setup-key.jpg" alt="Email tab in Subscription Groups showing the Setup subscription key prompt"><figcaption><p>The manager shows this prompt when the workspace needs an unsubscribe identifier.</p></figcaption></figure>
 
 ***
 
