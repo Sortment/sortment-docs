@@ -41,7 +41,7 @@ Following extra fields are required in email campaign setup.
 
 * **Sender Name**: What recipients will see as the “From” name.
 * **Reply-To Address** : Email where the replies should be directed.
-* **Subscription Groups**: User preference group the campaign belongs to – this ensures it is sent only to users who have explicitly opted in or not unsubscribed from this type of communication. More details on setup and usage available in the [document here](../../settings/subscription-groups-and-contact-fields.md).
+* **Subscription Groups**: Select the group that matches the purpose of this email. Opt-in, Opt-out and Required groups have different eligibility rules. See [Subscription groups and contact fields](../../settings/subscription-groups-and-contact-fields.md).
 
 </details>
 
