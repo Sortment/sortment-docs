@@ -79,3 +79,11 @@ All edits are made inline no need to re-generate unless you want a completely di
 #### **Edit Using Sortment AI**
 
 You can also refine or update the template using AI without starting over. Use this to tweak specific sections, change the tone, or update content. The AI will apply changes while preserving the overall template structure.
+
+### How do I check what was saved?
+
+Open **Templates**, choose **Email**, and select the saved template by name. In **Design**, open **Edit history** next to the template name. **Current** identifies the saved version. If you see **Your unsaved changes**, save the edits you want to keep before switching versions.
+
+Select an older version to inspect its design. The preview is read-only and opening it does not change the template. Choose **Back to current version** to resume editing.
+
+If you want the older design to become current, preview it first, then choose **Restore version**. This creates a new version from the selected one and keeps the intervening versions in history. Reopen **Edit history** to check which version is now current.

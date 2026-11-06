@@ -228,3 +228,11 @@ A throttle sets a sending pace; it does not promise a delivery time for each ema
 ### Which mailbox receives email replies?
 
 Check the **Reply-To Address** on the sender profile used for that campaign. If it is `help@example.com`, check that mailbox for a recipient’s reply even if the visible sender uses a different address. If you use a forwarding rule, check its destination as well. Setting a reply-to address directs replies; by itself, it does not create a support inbox or an automated reply workflow.
+
+### Can I schedule a campaign every other week?
+
+**Weekly** repeats every week on the weekday you select. For a warehouse audience, **Set up a recurring schedule** is available for a campaign without an A/B experiment. The repeat options don’t include alternate weeks.
+
+If a newsletter must go out exactly every 14 days, schedule a separate one-time campaign for each planned date. For example, for a Friday newsletter starting January 8, 2027, schedule January 8, January 22, and February 5 at the same time in your [workspace timezone](../../settings/workspace-timezone.md). Choose **At a specified date and time** for each send.
+
+Avoid using `*/14` in the day-of-month field of a cron expression for this cadence. That field starts over each month: January 29 and February 1 can both match, only three days apart.
