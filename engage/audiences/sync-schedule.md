@@ -45,6 +45,10 @@ From audience manager, click on action menu for any audience and click **Change 
 
 An audience refresh and a scheduled Customer.io audience sync are separate runs. The refresh updates the audience in your warehouse. The destination sync runs the audience query against the warehouse and uses the mapped identifier to update the Customer.io segment. A successful warehouse refresh alone does not mean the segment was updated.
 
+Open **Workspace Settings → Syncs** and find the Customer.io destination under **Destinations**. Find your item, then read **Frequency** and **Next Sync**. If the row shows **Not set** and **Manual**, it has no recurring schedule.
+
+<figure><img src="../../.gitbook/assets/customer-io-sync-list.jpg" alt="Customer.io sync list with two test items showing Not set under Frequency and Manual under Next Sync"><figcaption><p>In this example, both items are set to run manually.</p></figcaption></figure>
+
 If the segment looks stale, check when the source tables finished loading, then check the destination sync’s most recent run. Schedule the destination run after the source data is available. If the run failed, inspect the reported error and check that the identifier field is mapped. Rows without an identifier cannot contribute members to the segment.
 
 Use **Sync now** only when you intend to update Customer.io. On an existing segment, a successful sync can add newly matching members **and remove members who no longer match**. A synced row count is not necessarily the segment’s member count: several rows can refer to the same identifier.
