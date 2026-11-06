@@ -212,3 +212,19 @@ To upload a CSV, click **Edit** in the Audience section, then select [**Upload S
 * Engagement or behavioural data (such as clicks or opens) **cannot be used** for audience filtering in these campaigns.
 * Ensure your CSV includes all required fields for the selected channel (e.g., email address or phone number).
 * Some of the features will not work as expected on Sortment if you send a CSV based campaign: frequency capping and supression list. You will also not have access to fields stored in warehouse. If you are uploading a CSV with userids, same as in the warehouse, we suggest you upload it to the schema (admin permission required)
+
+### What if publishing fails?
+
+**Publishing** means Sortment is checking or preparing the campaign. Wait for the status to change before trying to publish again.
+
+If a content, audience, schedule or throttle validation fails before dispatch, the campaign returns to **Draft**. Open the draft, correct the issue named in the error, and publish again. For a throttle error, compare your requested sending rate with the integration’s per-minute limit.
+
+A validation error is different from a failed or partial send. If the campaign has already started sending, check the [campaign report](campaign-reports/README.md) before retrying so you do not send to the same recipients twice.
+
+### Why is a campaign sending more slowly than expected?
+
+A throttle sets a sending pace; it does not promise a delivery time for each email. For example, sending 10,000 eligible messages in batches of 100 per minute takes 100 batches. The provider’s integration limit can restrict the rate you can choose. Before increasing it, check the configured batch size and interval, the campaign status and any [delivery controls](../../settings/delivery-controls.md) that apply.
+
+### Which mailbox receives email replies?
+
+Check the **Reply-To Address** on the sender profile used for that campaign. If it is `help@example.com`, check that mailbox for a recipient’s reply even if the visible sender uses a different address. If you use a forwarding rule, check its destination as well. Setting a reply-to address directs replies; by itself, it does not create a support inbox or an automated reply workflow.
