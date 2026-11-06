@@ -45,6 +45,7 @@
 * [Campaigns](engage/campaigns/README.md)
   * [Overview](engage/campaigns/overview.md)
   * [Building a Campaign](engage/campaigns/building-a-campaign.md)
+  * [Throttling Campaign Sends](engage/campaigns/throttling.md)
   * [Campaign Reports](engage/campaigns/campaign-reports/README.md)
     * [Glossary](engage/campaigns/campaign-reports/glossary.md)
   * [Templates](engage/campaigns/templates/README.md)
