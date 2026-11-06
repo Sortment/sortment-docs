@@ -82,7 +82,7 @@ You can also refine or update the template using AI without starting over. Use t
 
 ### How do I check what was saved?
 
-Open **Templates**, choose **Email**, and select the saved template by name. In **Design**, open **Edit history** next to the template name. **Current** identifies the saved version. If you see **Your unsaved changes**, save the edits you want to keep before switching versions.
+Open **Engage → Templates**, choose **Email Templates**, and select the saved template by name. Use **Details** to check the subject and **Design** to inspect the content. In **Design**, the **Edit history** clock appears next to the name when the template has earlier versions or unsaved changes to an existing version. Open the clock and look for **Current** to identify the saved version. If you see **Your unsaved changes**, save the edits you want to keep before switching versions.
 
 Select an older version to inspect its design. The preview is read-only and opening it does not change the template. Choose **Back to current version** to resume editing.
 

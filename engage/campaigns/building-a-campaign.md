@@ -231,6 +231,10 @@ Check the **Reply-To Address** on the sender profile used for that campaign. If 
 
 ### Can I schedule a campaign every other week?
 
+Open **Launch** and choose **Schedule for later**.
+
+<figure><img src="../../.gitbook/assets/campaign-launch-menu.jpg" alt="Launch menu with Send now and Schedule for later"><figcaption><p>Choose Schedule for later to set a future send time.</p></figcaption></figure>
+
 **Weekly** repeats every week on the weekday you select. For a warehouse audience, **Set up a recurring schedule** is available for a campaign without an A/B experiment. The repeat options don’t include alternate weeks.
 
 If a newsletter must go out exactly every 14 days, schedule a separate one-time campaign for each planned date. For example, for a Friday newsletter starting January 8, 2027, schedule January 8, January 22, and February 5 at the same time in your [workspace timezone](../../settings/workspace-timezone.md). Choose **At a specified date and time** for each send.
