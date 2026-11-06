@@ -12,6 +12,23 @@ For example, you can create a subscription group specifically for **newsletter e
 * **Opt-out**: Users are automatically subscribed but have the option to unsubscribe.
 * **Required**: Users cannot unsubscribe from the group, often used for essential communications like account updates.
 
+### Can someone receive a bulk email after unsubscribing from the email channel?
+
+Yes, if the campaign uses a **Required** subscription group. A channel-wide email unsubscribe excludes a user from bulk **Opt-in** and **Opt-out** group campaigns. It does not, by itself, exclude that user from a bulk **Required** group campaign.
+
+For example, someone who opted out of all marketing email should be excluded from a newsletter sent with an Opt-out group. The same person can still be eligible for an essential account notice sent with a Required group. Selecting Required does not resubscribe the person to the newsletter or guarantee that the notice is delivered. Workspace [suppression rules](delivery-controls.md#suppression-rules) still apply.
+
+**To investigate an unexpected send:**
+
+1. Check the channel and subscription group on the campaign that sent the message. Open **Workspace Settings → Subscription Groups** and select **Email** to check the group type.
+2. Distinguish an unsubscribe from one group from an unsubscribe from the entire email channel. Compare the preference change with the time of the campaign run.
+3. If the user has multiple addresses or shares an address with another user, check which [unsubscribe identifier policy](hybrid-unsubscribe-policy.md) your workspace uses.
+4. If the result still does not match the group type and preferences, give Sortment support the campaign, run time and timezone, and the group type. Keep recipient details out of shared screenshots.
+
+{% hint style="warning" %}
+Choose **Required** only for messages your team has classified as essential. Do not change a marketing campaign to Required to reach someone who opted out.
+{% endhint %}
+
 #### **How Subscription Groups Work in Sortment**
 
 * When sending an **email campaign**, you can assign it to a subscription group.
@@ -44,7 +61,9 @@ A category named "Product Notifications" might contain subscription groups like 
 
 1. Go to the **Settings** section in your Sortment dashboard.
 2. Click on **Subscription Groups**.
-3. You’ll see separate tabs for **Email**, **SMS**, and **WhatsApp** — you can create and manage groups for each channel independently.
+3. Select the relevant channel: **Email**, **SMS**, **WhatsApp**, or **Push**. If the page shows **Setup subscription key** instead of your groups, a workspace administrator can configure the [unsubscribe identifier](hybrid-unsubscribe-policy.md) before creating a group. This setting applies across the workspace.
+
+<figure><img src="../.gitbook/assets/subscription-groups-setup-key.jpg" alt="Email tab in Subscription Groups showing the Setup subscription key prompt"><figcaption><p>The manager shows this prompt when the workspace needs an unsubscribe identifier.</p></figcaption></figure>
 
 ***
 
