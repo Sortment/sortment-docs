@@ -87,3 +87,11 @@ Displays how user activity evolves post-send:
 #### **3.5 Aggregated time performance**
 
 Shows cumulative open, click, and conversion events over time to show a trend in how user activity trends over time in a campaign
+
+### Why do conversions differ from another report?
+
+Start by comparing one email campaign run in both reports. A journey can include several messages, while a single campaign report covers the selected campaign. For a recurring campaign, **All Runs** includes more than one send once the campaign has repeated; choose the corresponding run to compare one send.
+
+Check the conversion goal and its tracking window in the campaign settings. A report that counts every order in a calendar month answers a different question from one that counts recipients who completed the campaign’s goal within its tracking window.
+
+Finally, compare the counts behind the percentages. For the email campaign [Conversion Rate](glossary.md), the denominator is unique emails delivered. For example, 10 converted recipients out of 200 unique deliveries is 5%. A report using 250 attempted sends would show 4% for the same 10 people. Match the goal, time window, run and denominator before investigating missing events.
