@@ -1,0 +1,7 @@
+# Why does Google Postmaster Tools show no data?
+
+A connected Google account can still return no statistics for a particular sending domain or day. Start by checking whether Google shows the same metric for the same account, domain and dates.
+
+1. Open [Google Postmaster Tools](https://postmaster.google.com/) with the Google account you connected to Sortment. In **Manage Domains**, check that your sending domain is listed and verified. If it’s missing, ask its owner to grant that account read access. [Google’s domain setup guide](https://support.google.com/mail/answer/9981691?hl=en) explains verification and access.
+2. Open the relevant dashboard and choose a date range that includes a completed sending day. Google reports on mail sent to personal Gmail accounts, uses UTC, and can withhold metrics on low-volume days. Recent data can also take more than a day to appear. A blank spam rate does not mean zero complaints. See [how Google reports dashboard data](https://support.google.com/mail/answer/14668346?hl=en).
+3. If Google shows a value, ask Sortment AI for that same metric, verified domain and date range. For example: “Show the daily spam rate for mail.example.com for October 12–18.” If the result is still empty, [contact Sortment support](../getting-started/contact-us.md) with the metric, domain, UTC dates and the error text, if present. Do not include credentials or recipient addresses.
