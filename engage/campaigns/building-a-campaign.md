@@ -235,7 +235,9 @@ Open **Launch** and choose **Schedule for later**.
 
 <figure><img src="../../.gitbook/assets/campaign-launch-menu.jpg" alt="Launch menu with Send now and Schedule for later"><figcaption><p>Choose Schedule for later to set a future send time.</p></figcaption></figure>
 
-**Weekly** repeats every week on the weekday you select. For a warehouse audience, **Set up a recurring schedule** is available for a campaign without an A/B experiment. The repeat options don’t include alternate weeks.
+For a warehouse audience in a campaign without an A/B experiment, **Set up a recurring schedule** lets you choose **Weekly**, a weekday and a time. Choosing Friday schedules a send every Friday. Check the first send date and the repeat description at the bottom of the dialog before you confirm.
+
+<figure><img src="../../.gitbook/assets/campaign-weekly-schedule.jpg" alt="Schedule campaign dialog with Weekly and Friday selected, showing the first send date and a weekly repeat at 2 PM"><figcaption><p>The preview shows the first matching Friday and the time in the workspace timezone.</p></figcaption></figure>
 
 If a newsletter must go out exactly every 14 days, schedule a separate one-time campaign for each planned date. For example, for a Friday newsletter starting January 8, 2027, schedule January 8, January 22, and February 5 at the same time in your [workspace timezone](../../settings/workspace-timezone.md). Choose **At a specified date and time** for each send.
 
