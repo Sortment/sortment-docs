@@ -29,6 +29,12 @@ For example, someone who opted out of all marketing email should be excluded fro
 Choose **Required** only for messages your team has classified as essential. Do not change a marketing campaign to Required to reach someone who opted out.
 {% endhint %}
 
+### Does reopening an email preference link resubscribe someone?
+
+No. If a recipient selects **Unsubscribe from all**, the hosted preference page confirms that they’ve unsubscribed from email. When they reopen the **manage preferences** link in their email, they see the list of groups again. Optional groups appear unchecked. Opening the list does not change their preferences.
+
+For example, if a recipient wants the newsletter again, they can select the newsletter group and choose **Save preferences**. Saving a change also lifts the channel-wide email opt-out. A recipient who wants to keep that opt-out can simply close the page.
+
 #### **How Subscription Groups Work in Sortment**
 
 * When sending an **email campaign**, you can assign it to a subscription group.
