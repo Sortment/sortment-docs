@@ -8,6 +8,18 @@ Handlebars within Sortment support features like conditional operations, loops, 
 
 ### **Handlebars in Sortment's Templates**
 
+#### Why does my email say “Invalid template variables” when the preview looks right?
+
+The error lists the variable names the email editor could not save. A name can appear in the template code even when it is invisible in the preview.
+
+1. Look for the name in the email body and preview text. In the MJML editor, open the template’s **⋯** menu and choose **View code** to inspect the markup. Check HTML comments, too: a note like `<!-- Example: {{first_name}} -->` can cause the same error as visible text.
+2. If the name is only in a comment, remove the placeholder from the source. If you need it for personalization, give it a name that starts with a letter and uses only letters and numbers, such as `{{firstName}}`. For an AI-generated template, you can ask Sortment AI to make that correction.
+3. Save again. If you renamed a variable, check its mapping and preview the email with a sample value before using the template in a campaign.
+
+This naming rule applies to simple placeholders you create in the email editor. You do not need to rename your warehouse column to match the placeholder.
+
+#### Example payload
+
 To understand how handlebars work, we first need to establish a sample payload, based off which the Handlebars function and applicability can be demonstrated.
 
 ```
