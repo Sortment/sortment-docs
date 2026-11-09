@@ -4,15 +4,14 @@ Delivery Controls in Sortment allow businesses to regulate when and how often us
 
 ### **Quiet Hours** <a href="#quiet-hours" id="quiet-hours"></a>
 
-Quiet Hours lets you specify a time period during which no messages of any type (e.g., email, SMS, push notifications) are sent to your users. This ensures that users are not disturbed during specific hours, like late at night or early in the morning. These are set based on the workspace timezone.
+Use Quiet Hours to set the hours when your workspace should avoid sending campaign messages. Enter the start and end times in the [workspace timezone](workspace-timezone.md).
 
-<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (19).png" alt="Quiet Hours from 8:00 PM to 8:00 AM in Asia/Kolkata"><figcaption><p>The timezone appears beside the start and end times.</p></figcaption></figure>
 
-**How it Works**
+**Will a blocked message go out after Quiet Hours end?**
 
-* During the configured quiet hours, no messages will be sent to users.
-* In case a campaign is due or throttled and attempts to sends communications during quiet hours, the messages will not be attempted to send to the user.
-* After quiet hours end, any scheduled messages that fall within that time window will resume.
+* **Scheduled campaign:** If you see **Campaign cannot be scheduled within quiet hours**, choose a time outside the window and schedule the campaign again. Dismissing the error does not move the start time.
+* **Single-send campaign:** Sortment checks Quiet Hours when it receives the send request. If Quiet Hours block the request, Sortment skips that send. It does not queue it for the morning. For example, with Quiet Hours set to 21:00–07:00, a request blocked at 23:00 will not go out at 07:00.
 
 **Setup Steps**
 
@@ -20,6 +19,8 @@ Quiet Hours lets you specify a time period during which no messages of any type 
 2. In the **Quiet Hours** section, click on the **Edit** button.
 3. Set the start and end time for quiet hours by selecting the desired time range (e.g., from 21:00 to 05:30).
 4. Save the configuration.
+
+If the workspace timezone changes, or its daylight saving offset changes, reopen **Delivery Controls** and check the displayed start and end times. If they no longer match the local hours you want, adjust them and save.
 
 ***
 
