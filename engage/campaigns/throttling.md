@@ -32,12 +32,10 @@ Sortment sends a fixed number of messages every minute until the full audience h
 
 ## Throttling and delivery controls interact
 
-Throttling does **not** bypass other delivery controls. Quiet hours and frequency capping still apply during the throttle window.
+Throttling controls the send rate. Configure Quiet Hours separately in workspace settings.
 
 {% hint style="warning" %}
-If a throttle window overlaps with a quiet-hours block, sends scheduled for that period will be held until quiet hours end — they do not skip ahead. This can cause sends to pile up and fire in a burst once quiet hours lift, partially defeating the purpose of throttling.
-
-Always check your quiet-hours configuration before setting a throttle window. See [Delivery Controls](building-a-campaign.md#delivery-controls) for details.
+Choose a start time and throttle window that fit within your sending hours. For example, if Quiet Hours start at 21:00, begin a two-hour send before 19:00. See [Quiet Hours](../../settings/delivery-controls.md#quiet-hours) for how Sortment handles blocked requests.
 {% endhint %}
 
 ## Throttling during IP warm-ups
@@ -61,5 +59,5 @@ For warm-ups, use audience splitting to control total volume per campaign and th
 | Spread in batches | Number of messages per minute | Hard throughput caps, provider rate limits |
 
 {% hint style="info" %}
-Both modes respect all other delivery controls. Plan your throttle window around your quiet-hours schedule to avoid unintended send bunching.
+Check the workspace’s sending hours before choosing a throttle duration or batch size.
 {% endhint %}

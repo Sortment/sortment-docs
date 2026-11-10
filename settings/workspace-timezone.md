@@ -30,10 +30,10 @@ If a teammate in a different geography sees a different time than you expect on 
 
 <figure><img src="../.gitbook/assets/workspace-timezone-dropdown.png" alt=""><figcaption><p>Workspace timezone dropdown</p></figcaption></figure>
 
-4. Save the change. The new timezone immediately becomes the reference for all time-based features and displays in this workspace.
+4. Save the change, then review the times shown for your active campaigns, journeys, and syncs.
 
 {% hint style="warning" %}
-**Changing the timezone affects active schedules.** Quiet hours, sync schedules, and journey schedules will continue to fire at the same *wall-clock* time in the new timezone — not the same instant in time. Review active campaigns, journeys, and syncs after a change to confirm they still run when you expect.
+**Quiet Hours follow the workspace’s local clock.** For example, a window starting at 21:00 in New York still starts at 21:00 after a daylight saving change. If you switch the workspace to another timezone, review the window in [Delivery Controls](delivery-controls.md#quiet-hours) to confirm the hours suit recipients there.
 {% endhint %}
 
 ## Picking the right timezone during onboarding
