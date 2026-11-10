@@ -12,11 +12,13 @@ Handlebars within Sortment support features like conditional operations, loops, 
 
 The error lists the variable names the email editor could not save. A name can appear in the template code even when it is invisible in the preview.
 
-1. Look for the name in the email body and preview text. In the MJML editor, open the template’s **⋯** menu and choose **View code** to inspect the markup. Check HTML comments, too: a note like `<!-- Example: {{first_name}} -->` can cause the same error as visible text.
-2. If the name is only in a comment, remove the placeholder from the source. If you need it for personalization, give it a name that starts with a letter and uses only letters and numbers, such as `{{firstName}}`. For an AI-generated template, you can ask Sortment AI to make that correction.
+1. Look for the listed name in the email body and preview text. In the MJML editor, open the template’s **⋯** menu and choose **View code** to inspect the markup. Check any Outlook-specific conditional sections as well. Their contents can be hidden in the preview and still appear in the saved email.
+2. For a simple personalization variable, start with a letter and use letters and numbers, for example `{{firstName}}` in place of `{{first_name}}`. Remove an unused placeholder from the source. For an AI-generated email, you can ask Sortment AI to make the correction.
 3. Save again. If you renamed a variable, check its mapping and preview the email with a sample value before using the template in a campaign.
 
 This naming rule applies to simple placeholders you create in the email editor. You do not need to rename your warehouse column to match the placeholder.
+
+The current MJML editor removes ordinary HTML comments from the saved email. If the listed name appears in a comment, check the rest of the email and preview text for another occurrence. If an older editor still flags a placeholder that appears only in a comment, remove the placeholder from that comment and save again.
 
 #### Example payload
 
