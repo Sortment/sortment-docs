@@ -221,6 +221,12 @@ If a content, audience, schedule or throttle validation fails before dispatch, t
 
 A validation error is different from a failed or partial send. If the campaign has already started sending, check the [campaign report](campaign-reports/README.md) before retrying so you do not send to the same recipients twice.
 
+### What happens if the warehouse disconnects while Sortment exports the audience?
+
+For a campaign audience exported from **Snowflake** or **Amazon Redshift**, Sortment can retry a temporary connection failure up to twice after the first attempt. Let the current run finish before deciding whether to start another one. Sortment uses the files from the successful export, so partial files from an earlier attempt are excluded.
+
+If the run fails, check the warehouse connection and the reported error. A SQL or permissions error needs to be corrected before another attempt can succeed.
+
 ### Why is a campaign sending more slowly than expected?
 
 A throttle sets a sending pace; it does not promise a delivery time for each email. For example, sending 10,000 eligible messages in batches of 100 per minute takes 100 batches. The provider’s integration limit can restrict the rate you can choose. Before increasing it, check the configured batch size and interval, the campaign status and any [delivery controls](../../settings/delivery-controls.md) that apply.
