@@ -33,7 +33,7 @@ If a teammate in a different geography sees a different time than you expect on 
 4. Save the change, then review the times shown for your active campaigns, journeys, and syncs.
 
 {% hint style="warning" %}
-**Check Quiet Hours after a timezone or daylight saving change.** Open [Delivery Controls](delivery-controls.md#quiet-hours) and check the start and end times. The window you saved can appear at a different local time when the UTC offset changes. Adjust and save the window if necessary.
+**Quiet Hours follow the workspace’s local clock.** For example, a window starting at 21:00 in New York still starts at 21:00 after a daylight saving change. If you switch the workspace to another timezone, review the window in [Delivery Controls](delivery-controls.md#quiet-hours) to confirm the hours suit recipients there.
 {% endhint %}
 
 ## Picking the right timezone during onboarding
