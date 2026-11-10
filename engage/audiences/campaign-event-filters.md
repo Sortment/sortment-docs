@@ -2,6 +2,12 @@
 
 The **Campaign Event Filters** feature enables users to define audience segments based on their engagement with various campaign touchpoints, including **email interactions, SMS engagements, WhatsApp activities etc**. These filters allow precise targeting for personalized messaging based on whether users are interacting with previous communication or not.
 
+### Which campaign events can I use in a new workspace?
+
+Once the event list loads, you can build an audience using **Email sent**, **WhatsApp message sent**, or **SMS sent**, even before your first campaign sends. These filters let you define the audience in advance. For example, an audience of people who were sent at least one email will start matching people when there are qualifying sends.
+
+Other engagement filters, such as **Email opened**, depend on the events available in your workspace. If you only see the three Sent options, check whether the workspace has recorded the engagement event you want to use.
+
 ### Available Filters
 
 #### **Email Engagement**
