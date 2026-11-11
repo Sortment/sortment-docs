@@ -19,6 +19,12 @@ It is required to set up / have a SendGrid account before configuring the same o
    4. **From Name:** Enter the name associated with the Sender that was entered in the "From Email" field.
    5. **Unsubscribe Group ID**: Enter the group ID associated with your SendGrid account
 
+### What does publishing check for a native SendGrid campaign?
+
+If native sending is enabled for your workspace or campaign, publish the email campaign in Sortment with your SendGrid integration selected. Publishing prepares the campaign without requiring you to create a separate notification event. Sortment checks native delivery eligibility when the campaign runs.
+
+For native delivery, use an email campaign with a warehouse audience, a SendGrid integration and a subject and body that the native sender can render. CSV audiences and A/B experiments use the standard delivery path. If a published campaign takes the standard path, check the audience source, experiment settings and integration first. If those match, ask support to check storage compatibility, template logic and the throttle duration for the run.
+
 ### Message Delivery Status
 
 To enable Sortment to provide and track status against your email campaigns via SendGrid, you will have to manually update the SendGrid account with the Sortment callback endpoint. To update the callback, please follow the steps below:&#x20;
