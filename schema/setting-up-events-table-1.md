@@ -1,27 +1,25 @@
 # Setting Up Events Table
 
-Sortment allows you to track event-based data by adding **event tables** to your schema. These tables capture timestamped actions such as transfers, checkouts, or logins. Here's how to set up an events table (e.g., `FMS_TRANSFERS`) from a connected warehouse or CSV upload:
+Sortment allows you to track event-based data by adding **event tables** to your schema. These tables capture timestamped actions such as transfers, checkouts, or logins. Here's how to set up an events table (e.g., `FMS_TRANSFERS`) from your connected warehouse:
 
 #### Adding an events table
 
-Setting events table is similar to setting the related table. Primary difference being events table contain information of various events performed by user on your website, app or else while the related table contain all the other information about your data.
+Use an event table for actions you want to filter by time, such as an email delivery or a completed checkout.
 
-1. In the **schemas** view, click the **“Add table”** button (top right of the canvas).
-2. From the dropdown, select **“Add event table.”**
+1. Open the **Relations** canvas in the workspace where you want to use the events.
+2. Open **Add table** and choose **Events**.
 
-![](<../.gitbook/assets/a1 (3).png>)
+<figure><img src="../.gitbook/assets/relations-add-events.jpg" alt="Add table menu with Related table and Events options"><figcaption><p>Step 1 of 2. Choose Events to add timestamped activity.</p></figcaption></figure>
 
-2.  In the **setup** step, choose your source:
+3. Choose how to add the data. For an existing warehouse table or view, choose **Select a table**. Choose **Query with SQL** if you need to filter, transform or join the source first.
 
-    * **Warehouse** – Select this if you're linking to a table already synced with Sortment's data warehouse.
-    * **CSV** – Use this if you're uploading data from a CSV file.
+<figure><img src="../.gitbook/assets/relations-event-source-options.jpg" alt="Event table setup with Select a table and Query with SQL"><figcaption><p>Step 2 of 2. Choose the warehouse source for the event table.</p></figcaption></figure>
 
-    <div data-gb-custom-block data-tag="hint" data-style="danger" class="hint hint-danger"><p>For CSV upload make sure your file follows the format:</p><p><strong>Headers</strong> must contain only <strong>letters, numbers, or underscores,</strong> No spaces or special characters are allowed in header names and each header must be <strong>≤ 255 characters</strong>.</p><p>The CSV file must be less than 50MB in size.</p></div>
-3. Once you select your source, choose the appropriate table (e.g., `FMS_TRANSFERS`) and click **continue**.
+4. For **Select a table**, choose the table or view you want to use and continue to the table details.
 
 ![](<../.gitbook/assets/a3 (2).png>)
 
-4. Configure Table Details
+5. Configure Table Details
    1. **Name your events table** – Pick a name that clearly describes the event (e.g., “Transfer Details”).
    2. **(Optional) Add a description** to help identify the table’s purpose.
    3. **Choose a primary key** – This should be a unique identifier for each event.
@@ -66,3 +64,14 @@ Click **continue** to proceed.
 5. Once your configuration is complete, click **Save**.
 
 This will link the data across tables based on the selected keys, enabling richer queries and insights.
+
+### Can I build an audience using email activity from another workspace?
+
+Yes, if the destination workspace can read the relevant events from your warehouse and match them to its users. Two workspaces with access to the same customer table can still have different event tables in their schemas.
+
+1. Decide which event qualifies someone. For example, to follow up with people who received a product announcement, use a delivery event for that campaign. A send event answers a different question.
+2. Have your data team make the permitted events available in a table or view that the destination workspace’s connection can read. Include an event ID, event time, event name, campaign identifier and a user identifier that matches the destination’s primary table.
+3. In the destination workspace, add the source as an event table using the steps above. Connect it to the primary table on the shared user identifier.
+4. Build the audience using the event, campaign and time window you need. Check a known test user who qualifies and one who should be excluded before using the audience.
+
+If the table is missing from the picker, check the destination connection’s access. If the table appears but the audience is empty, check that the event and date range exist in the source and that the user identifiers match.

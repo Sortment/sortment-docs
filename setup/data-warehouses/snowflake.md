@@ -20,8 +20,14 @@ Following required fields into Sortment:
   > For example, older Snowflake accounts often have identifiers that look like ACCOUNT\_LOCATOR.CLOUD\_REGION\_ID.CLOUD, whereas newer Snowflake accounts have identifiers that look like ORGNAME-ACCOUNT\_NAME.
   >
   > For more details, visit [Snowflake's account identifier docs](https://docs.snowflake.com/en/user-guide/admin-account-identifier).
-* **Warehouse**: The warehouse that will be used when Sortment executes queries in Snowflake. Follow the [Snowflake query reference](snowflake.md#snowflake-query-reference) to share with Sortment access to a warehouse.
+* **Warehouse** is the primary Snowflake warehouse. Sortment uses it for all queries unless you configure a secondary warehouse for the web app.
 * **Database**: The database that Sortment can access to write data in Snowflake. Follow the [Snowflake query reference](snowflake.md#snowflake-query-reference) to share with Sortment access to a database with write access to respective schema.
+
+### Can dashboards use a different warehouse from scheduled jobs?
+
+Yes. In **Workspace Settings → Data connection**, enter the second virtual warehouse’s name in **Secondary warehouse (frontend queries only)**. For example, you could keep scheduled deliveries on `MARKETING_JOBS` and run dashboards, charts, explores and analytics pages on `MARKETING_UI`. API calls and AI queries continue to use the primary warehouse. Leave the optional field empty to use one warehouse for both workloads.
+
+Ask your Snowflake administrator to confirm that the connection’s role has **USAGE** on the secondary warehouse. Test the connection. If the test reports that it could not run on that warehouse, check the name and the role’s access. An interactive query can fall back to the primary warehouse when the secondary is unavailable, so a dashboard loading successfully does not by itself confirm the configuration. Connections using external-browser authentication use the primary warehouse.
 
 ### Service Account Credentials
 
