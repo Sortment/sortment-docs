@@ -88,6 +88,14 @@ Displays how user activity evolves post-send:
 
 Shows cumulative open, click, and conversion events over time to show a trend in how user activity trends over time in a campaign
 
+### Why can I see sends before detailed analytics are available?
+
+Open the campaign and choose **View analytics**. If you see the “Detailed analytics will be available after” notice, you can already check sends and send skips. The time in the notice uses your workspace timezone and marks the earliest the detailed report can open.
+
+<figure><img src="../../../.gitbook/assets/campaign-analytics-availability.jpg" alt="Campaign report showing the earliest time for detailed analytics in the workspace timezone"><figcaption><p>The report can still be waiting for a warehouse refresh after the displayed time.</p></figcaption></figure>
+
+For campaigns showing this notice, at least 30 minutes must pass after the send, and the campaign event data must refresh successfully in the warehouse after the send. For example, if you send at 09:00 and the first successful refresh finishes at 09:45, detailed analytics can appear at 09:45. If the notice persists, check the last successful campaign event refresh before comparing conversion counts.
+
 ### Why do conversions differ from another report?
 
 Start by comparing one email campaign run in both reports. A journey can include several messages, while a single campaign report covers the selected campaign. For a recurring campaign, **All Runs** includes more than one send once the campaign has repeated; choose the corresponding run to compare one send.
