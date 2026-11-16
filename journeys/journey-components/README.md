@@ -35,10 +35,11 @@ For a detailed breakdown, see [Delays](delays.md#id-1.-delay).
 These blocks let you dynamically route users down different paths based on their attributes, behaviours, or randomisation logic.
 
 * **Filter** – Branch logic based on conditions (e.g. user’s location, subscription status).
-* **Split** – Randomly divide users into multiple paths (useful for A/B testing).
+* **Split** – Route users by the value of a property.
 * **Experiment** – Setup an A/B test in the journey and measure performance across content or flow logic ideas.
+* [**AI Classify**](flow-control.md#ai-classify) – Route users by the meaning of text, such as a reply.
 
-For a detailed breakdown, see [Flow Control blocks](flow-control.md#filter).
+For a detailed breakdown, see [Flow Control blocks](flow-control.md).
 
 ***
 
