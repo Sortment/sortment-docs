@@ -2,11 +2,12 @@
 
 Flow control blocks allow you to determine how users progress through a Journey based on attributes, behaviours, or experimentation logic. These steps dynamically shape user paths, enabling precise audience targeting and optimisation.
 
-There are three types of flow control components:
+Choose a flow control block:
 
 * Filter
 * Split
 * Experiment
+* [AI Classify](#ai-classify)
 
 ***
 
@@ -95,4 +96,17 @@ Test two onboarding email sequences by splitting users 40/60. Track which sequen
 The sum total percentages for all variants and control group should add up to 100%.
 {% endhint %}
 
-####
+## AI Classify
+
+Use **AI Classify** when the next step depends on what someone wrote. For example, a reply that says “Can I move my appointment to Friday?” could follow a **Reschedule** path, while “Tuesday still works” could follow a **Confirm** path. Place the block after the journey has received the reply you want to classify.
+
+1. On the journey canvas, select **+** where you want to branch. Under **Flow control**, select **AI Classify**.
+2. In **Rules to classify on**, describe the categories and what belongs in each. For the appointment example, enter “Use Reschedule when someone asks for a different time. Use Confirm when they accept their current time.”
+3. Select **Generate**. Review **Guidance** and **Paths** to see how Sortment interpreted your rules. Select **Modify** if the categories overlap or a useful path is missing.
+4. Connect each path to its next step. Give **Everyone else** a next step if the journey should continue when it has no matching classification.
+
+<figure><img src="../../.gitbook/assets/ai-classify-picker.jpg" alt="The Flow control block picker lists Filter, Split, Experiment and AI Classify."><figcaption><p>Find AI Classify under Flow control when adding a journey step.</p></figcaption></figure>
+
+### What happens if classification takes too long?
+
+Sortment tries a second classifier automatically if the first one fails. The journey waits up to the block’s timeout for a result. The default is **30 minutes**. If no result arrives in time, the contact continues without a label. A connected **Everyone else** path handles that case. If you leave it empty, the contact’s journey ends there.
