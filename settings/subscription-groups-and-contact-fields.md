@@ -35,6 +35,13 @@ No. If a recipient selects **Unsubscribe from all**, the hosted preference page 
 
 For example, if a recipient wants the newsletter again, they can select the newsletter group and choose **Save preferences**. Saving a change also lifts the channel-wide email opt-out. A recipient who wants to keep that opt-out can simply close the page.
 
+### What should I do if a recipient sees “Failed to unsubscribe. Please try again.”?
+
+On the page for unsubscribing from a group, this message means Sortment could not confirm the update. Ask the recipient to select **Unsubscribe** again on the same page.
+
+If the error repeats, contact Sortment support with the campaign, subscription group, error text, and the time and timezone of the attempt. Support can check whether the preference reached your warehouse. Keep the recipient’s address and personal unsubscribe link out of shared screenshots.
+
+
 #### **How Subscription Groups Work in Sortment**
 
 * When sending an **email campaign**, you can assign it to a subscription group.
