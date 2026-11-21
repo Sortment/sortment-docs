@@ -217,6 +217,7 @@
   * [Delivery Controls](settings/delivery-controls.md)
   * [Test Profiles](settings/test-profiles.md)
   * [Alerts](settings/alerts.md)
+  * [Mobile AI permission and account requests](settings/mobile-privacy-and-account.md)
 
 ## How to guides
 
@@ -229,6 +230,7 @@
 ## FAQ
 
 * [Overview](faq/README.md)
+* [Use Sortment on mobile](faq/mobile-support.md)
 * [Should I use a Quest, a Task, or a Journey?](faq/quest-task-or-journey.md)
 * [Push Delivery on Oppo, Vivo, OnePlus & Xiaomi Devices](faq/push-delivery-oem-devices.md)
 * [A/B Testing in Campaigns](faq/ab-testing-in-campaigns.md)
