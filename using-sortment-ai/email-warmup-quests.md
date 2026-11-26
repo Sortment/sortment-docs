@@ -6,7 +6,7 @@ Use an email warm-up Quest to set up a sender and follow its warm-up progress. T
 
 | Template | Use it when | Prepare before starting |
 | --- | --- | --- |
-| **Email Warm-up** | You want Sortment to provision a managed SendGrid sub-user and dedicated IP. | The sender name and email address, and confirmation that managed warm-up is enabled for your workspace. |
+| **Email Warm-up** | You want Sortment to provision a managed SendGrid sub-user and dedicated IP. | An email sender profile in the current workspace, and confirmation that managed warm-up is enabled for your workspace. |
 | **Email Warm-up (Amazon SES)** | You want to use your own Amazon SES account and sending domain. | A sender profile in the current workspace, AWS access credentials, the AWS region, and access to the domain's DNS settings. |
 
 <figure><img src="../.gitbook/assets/email-warmup-provider-choices.jpg" alt="Deliverability templates showing Email Warm-up and Email Warm-up (Amazon SES)"><figcaption><p>The two warm-up options in the Deliverability tab.</p></figcaption></figure>
@@ -20,19 +20,21 @@ For SES, use the credentials requested by the warm-up form: **AWS access key ID*
 1. Open **Plan → Quests**.
 2. Click **New**.
 3. Choose **Deliverability** in the template picker.
-4. Select the warm-up option for your provider and review its setup form. For SES, check that **Sender email** identifies the sender profile you intend to use.
+4. Select the warm-up option for your provider. Give the Quest a name and select **Continue**.
+5. Under **Sender email**, choose the existing sender profile you intend to warm up. Review the selection even if a default profile is already shown. For SES, also complete the requested AWS credential and region fields.
+6. Review the workspace, sender and provider before starting enrollment.
 
 {% hint style="warning" %}
 Starting a warm-up Quest creates provider resources and begins an active enrollment. Review the workspace, sender and provider before choosing **Start warm-up quest** or **Start SES warm-up quest**.
 {% endhint %}
 
-After a successful enrollment, Sortment opens the monitoring Quest. For SES, enrollment starts domain verification; follow the DKIM instructions for the selected sending domain before attempting to publish email campaigns.
+After a successful enrollment, Sortment opens the Quest and starts its setup chat. Answer the remaining questions about your sending plans. For SES, enrollment starts domain verification; follow the DKIM instructions for the selected sending domain before attempting to publish email campaigns.
 
 ## Why can't I start or publish?
 
 **Managed SendGrid warm-up is not configured.** Contact support with your workspace name and the error message. Configuration of the managed service needs to be completed before you can enroll.
 
-**No sender profiles found.** Check the current workspace and its **Settings → Sender profiles**. The SES form also provides **Create a new sender profile**. Select a profile whose sender address uses the domain you intend to verify.
+**No sender profiles found.** Check the current workspace and its **Settings → Sender profiles**. Both enrollment forms provide **Create a new sender profile**. Select a profile whose sender address uses the domain you intend to verify.
 
 **The SES domain is not verified.** Check the sending domain and its DKIM records with the person who manages your DNS. Publishing can remain blocked while verification is pending.
 
