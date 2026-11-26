@@ -63,6 +63,8 @@
     * [Action blocks](journeys/journey-components/action-blocks.md)
   * [Tutorial: Creating a journey](journeys/tutorial-creating-a-journey.md)
   * [Journey Settings](journeys/journey-settings.md)
+  * [Journey analytics](journeys/journey-analytics.md)
+  * [Email-click filters](journeys/email-click-filters.md)
 
 ## SMS
 
