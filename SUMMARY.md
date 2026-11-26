@@ -14,6 +14,7 @@
 * [KPIs](using-sortment-ai/kpis.md)
 * [Tasks](using-sortment-ai/tasks.md)
 * [Data analysis](using-sortment-ai/data-analysis.md)
+* [Choose an email warm-up Quest](using-sortment-ai/email-warmup-quests.md)
 
 ## Schema
 
@@ -229,6 +230,7 @@
 ## FAQ
 
 * [Overview](faq/README.md)
+* [Why can’t I create a Sortment account?](faq/account-signup.md)
 * [Should I use a Quest, a Task, or a Journey?](faq/quest-task-or-journey.md)
 * [Push Delivery on Oppo, Vivo, OnePlus & Xiaomi Devices](faq/push-delivery-oem-devices.md)
 * [A/B Testing in Campaigns](faq/ab-testing-in-campaigns.md)
