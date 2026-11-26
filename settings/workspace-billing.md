@@ -15,3 +15,5 @@ If your workspace has a **Billing** section, open it from **Workspace settings**
 3. For proof of a payment, look under **Payments**. Find the payment and select **View receipt** if a receipt is available.
 
 If an invoice is missing, check the selected workspace and the billing period. For an older invoice, check the billing owner’s or invoice recipient’s email. An invoice and a payment receipt are separate documents.
+
+For the meaning of the counters and allowance resets, see [workspace usage](workspace-usage.md).

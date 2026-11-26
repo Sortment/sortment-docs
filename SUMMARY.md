@@ -210,6 +210,7 @@
 
 * [Settings](settings/README.md)
   * [Find your workspace invoices and payment receipts](settings/workspace-billing.md)
+  * [Workspace usage](settings/workspace-usage.md)
   * [Workspace Timezone](settings/workspace-timezone.md)
   * [Sync Schedules](settings/sync-schedules.md)
   * [Audit Logs](settings/audit-logs.md)
